@@ -88,7 +88,7 @@ function processLastItem(list, cb) {
  * should return 1000.
 */
 function processSum(numList, cb) {
-  return cb(numList.reduce((num1, num2) => num1 + num2, 0));
+  return cb(numList.reduce((accumulator, currentValue) => accumulator + currentValue, 0));
 }
 
 processSum([10, 20, 30], (num) => num + " is a big number")
