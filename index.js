@@ -112,8 +112,7 @@ processSum([10, 20, 30], (num) => num + " is a big number")
  * should return 1000.
 */
 function processProduct(num1, num2, cb) {
-  let product = num1 * num2;
-  return cb(product);
+  return cb(num1 * num2);
 }
 
 /**
@@ -138,11 +137,11 @@ function processProduct(num1, num2, cb) {
 */
 function processContains(item, list, cb) {
   let exists = false;
-  for (i=0; i < list.length; i++) {
-    if (item === list[i]) {
+  list.forEach((element) => {
+    if (element === item) {
       exists = true;
     }
-  }
+  });
   return cb(exists);
 }
 
